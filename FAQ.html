@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EssentialRoad - Контакты</title>
+        <link rel="stylesheet" href="styles/output.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="">
+        <!-- ==================== HEADER ==================== -->
+        <header
+            class="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/40 bg-white/70 backdrop-blur-xl"
+        >
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+                <div class="flex h-16 items-center justify-between">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center gap-2.5">
+                        <img
+                            class="h-10 w-auto"
+                            src="public/images/basic-logo-notext.png"
+                            alt="логотип EssentialRoad"
+                        />
+                        <!-- Старое лого --
+            <!--<div class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-accent-500 shadow-md shadow-brand-500/20">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+            </div>-->
+
+                        <span
+                            class="text-lg font-bold text-slate-900 tracking-tight"
+                            >Essential<span class="text-accent-600"
+                                >Road</span
+                            ></span
+                        >
+                    </a>
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex items-center gap-1">
+                        <a
+                            href="index.html"
+                            class="px-4 py-2 text-sm text-slate-600 hover:text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                            >Главная</a
+                        >
+                        <a
+                            href="about.html"
+                            class="px-4 py-2 text-sm text-slate-600 hover:text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                            >Контакты</a
+                        >
+                        <a
+                            href="FAQ.html"
+                            class="px-4 py-2 text-sm hover:text-brand-600 bg-brand-100/50 text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                            >Вопросы</a
+                        >
+                    </nav>
+                    <!-- Desktop Buttons -->
+                    <div class="hidden md:flex items-center gap-3">
+                        <button
+                            class="text-sm px-4 py-2 text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-xl font-medium transition-all cursor-pointer"
+                        >
+                            Войти
+                        </button>
+                        <button
+                            class="text-sm px-6 py-3 bg-linear-to-r from-brand-600 to-brand-700 text-white rounded-xl font-medium shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"
+                        >
+                            Начать бесплатно
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button
+                        onclick="
+                            document
+                                .getElementById('mobile-menu')
+                                .classList.toggle('open');
+                            this.querySelector('.icon-menu').classList.toggle(
+                                'hidden',
+                            );
+                            this.querySelector('.icon-x').classList.toggle(
+                                'hidden',
+                            );
+                        "
+                        class="md:hidden p-2 text-slate-600 hover:text-slate-900 cursor-pointer"
+                    >
+                        <svg
+                            class="icon-menu h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="4" x2="20" y1="12" y2="12" />
+                            <line x1="4" x2="20" y1="6" y2="6" />
+                            <line x1="4" x2="20" y1="18" y2="18" />
+                        </svg>
+                        <svg
+                            class="icon-x h-5 w-5 hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="md:hidden border-t border-slate-200/40 bg-white/90 backdrop-blur-xl"
+            >
+                <div class="px-4 py-4 space-y-2">
+                    <a
+                        href="index.html"
+                        class="block px-4 py-2.5 text-sm text-slate-600 hover:text-brand-600 rounded-lg hover:bg-brand-50/50"
+                        >Главная</a
+                    >
+                    <a
+                        href="about.html"
+                        class="block px-4 py-2.5 text-sm text-slate-600 hover:text-brand-600 rounded-lg hover:bg-brand-50/50"
+                        >Контакты</a
+                    >
+                    <a
+                        href="FAQ.html"
+                        class="block px-4 py-2.5 text-sm hover:text-brand-600 bg-brand-100/50 text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                        >Вопросы</a
+                    >
+
+                    <div
+                        class="pt-3 border-t border-slate-100 flex flex-col gap-2"
+                    >
+                        <button
+                            class="w-full text-sm px-4 py-2.5 border-2 border-slate-200 bg-white/80 text-slate-700 rounded-xl font-medium hover:border-brand-300 hover:text-brand-700 transition-all cursor-pointer"
+                        >
+                            Войти
+                        </button>
+                        <button
+                            class="w-full text-sm px-4 py-2.5 bg-linear-to-r from-brand-600 to-brand-700 text-white rounded-xl font-medium shadow-lg shadow-brand-500/25 transition-all cursor-pointer"
+                        >
+                            Начать бесплатно
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-16">
+            <section class="py-10">
+                <div class="flex flex-col items-center gap-2 py-10">
+                    <div
+                        class="mb-2 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-brand-100 text-brand-700"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+                            />
+                        </svg>
+                        Узнайте больше о нас
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight"
+                    >
+                        Частые вопросы
+                    </h1>
+                    <p
+                        class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto text-center"
+                    >
+                        Мы отобрали самые частые вопросы, которые беспокоют
+                        наших клиетнов и собрали здесь ответы на каждый из них.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2 items-center divide divide-y-2">
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Что такое курс на основе дорожной
+                                    карты?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Курс на основе дорожной карты — это
+                                        структурированная образовательная
+                                        программа, где каждый этап обучения
+                                        визуализирован в виде интерактивной
+                                        карты. Студент видит весь путь от начала
+                                        до конца: какие темы нужно изучить, в
+                                        каком порядке, какие навыки он получит
+                                        на каждом этапе. Это помогает сохранять
+                                        мотивацию и чётко понимать свой
+                                        прогресс.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Как создать свой курс на платформе?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Для создания курса зарегистрируйтесь как
+                                        автор, перейдите в панель управления и
+                                        нажмите «Создать курс». Вы начнёте с
+                                        построения дорожной карты: добавляйте
+                                        этапы, модули и уроки в визуальном
+                                        редакторе drag-and-drop. К каждому узлу
+                                        карты можно прикрепить видео, текст,
+                                        тесты, задания и дополнительные
+                                        материалы. После завершения настройки
+                                        опубликуйте курс одним кликом.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Какие форматы контента
+                                    поддерживаются?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Платформа поддерживает широкий спектр
+                                        форматов: видеоуроки (MP4, WebM),
+                                        текстовые материалы с
+                                        Markdown-разметкой, интерактивные тесты
+                                        и квизы, кодовые песочницы для
+                                        программирования, PDF-документы,
+                                        слайд-презентации, а также внешние
+                                        ссылки на ресурсы. Вы можете
+                                        комбинировать форматы внутри одного узла
+                                        дорожной карты.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Как происходит монетизация курсов?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Авторы могут выбрать несколько моделей
+                                        монетизации: разовая покупка курса,
+                                        подписка на весь каталог автора,
+                                        freemium-модель (часть контента
+                                        бесплатно, продвинутые модули — платно)
+                                        или донаты. Платформа берёт комиссию 15%
+                                        с каждой продажи. Выплаты авторам
+                                        осуществляются еженедельно на банковскую
+                                        карту или электронный кошелёк.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Могу ли я отслеживать прогресс
+                                    студентов?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Да! В панели автора доступна подробная
+                                        аналитика: вы видите, сколько студентов
+                                        проходят каждый этап дорожной карты, где
+                                        они «застревают», какие уроки
+                                        пропускают, средний процент завершения
+                                        курса и результаты тестов. Это помогает
+                                        улучшать контент и понимать, какие
+                                        модули требуют доработки.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Как работает система ветвления в дорожной
+                                    карте?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Дорожная карта поддерживает нелинейную
+                                        структуру: вы можете создавать
+                                        параллельные ветки для разных
+                                        специализаций, опциональные модули и
+                                        условные переходы. Наприм��р, после
+                                        базового блока студент может выбрать
+                                        одну из нескольких специализаций. Также
+                                        можно задать пререквизиты — узлы,
+                                        которые необходимо пройти, прежде чем
+                                        откроется следующий этап.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Можно ли встроить курс на свой сайт?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Да, платформа предоставляет embed-виджет
+                                        и API для интеграции. Вы можете встроить
+                                        интерактивную дорожную карту курса на
+                                        свой сайт через iframe или
+                                        JavaScript-виджет. Также доступен
+                                        white-label режим на тарифе «Про» — ваши
+                                        студенты будут видеть ваш брендинг,
+                                        логотип и цветовую схему без упоминания
+                                        платформы.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Выдаются ли сертификаты по окончании
+                                    курса?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Да, автор может настроить автоматическую
+                                        выдачу сертификатов при завершении
+                                        дорожной карты или отдельных её веток.
+                                        Сертификаты генерируются в PDF-формате с
+                                        уникальным QR-кодом для верификации. Вы
+                                        можете загрузить собственный шаблон
+                                        сертификата или использовать один из
+                                        предложенных дизайнов. Студенты могут
+                                        делиться сертификатами в LinkedIn и
+                                        соцсетях.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 9 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Есть ли возможность совместной работы над
+                                    курсом?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Конечно! Вы можете пригласить соавторов
+                                        в проект курса, назначив им роли:
+                                        редактор (полный доступ к контенту),
+                                        рецензент (может оставлять комментарии и
+                                        предложения) или модератор (управление
+                                        студентами и отзывами). Все изменения
+                                        сохраняются с историей версий, так что
+                                        вы всегда можете откатиться к
+                                        предыдущему состоянию дорожной карты.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- FAQ 10 -->
+                    <div
+                        class="rounded-lg overflow-hidden bg-white w-1/2 min-w-75"
+                    >
+                        <label
+                            class="flex items-center justify-between p-4 cursor-pointer flex-col hover:bg-neutral-200/50 transition-all duration-150"
+                        >
+                            <input type="checkbox" class="peer hidden" />
+                            <div
+                                class="flex justify-between w-full p-1 border-b-2 border-transparent transition-colors duration-150 peer-checked:border-gray-500"
+                            >
+                                <span class="font-medium text-gray-900"
+                                    >Какие тарифные планы доступны для
+                                    авторов?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out peer-checked:grid-rows-[1fr] w-full"
+                            >
+                                <div class="overflow-hidden">
+                                    <p class="p-4 pt-0 text-gray-600">
+                                        Доступно три тарифа.
+                                        <strong>Бесплатный</strong> — до 2
+                                        курсов, базовая аналитика, стандартные
+                                        шаблоны дорожных карт.
+                                        <strong>Про</strong> (990 ₽/мес) —
+                                        неограниченное число курсов, расширенная
+                                        аналитика, white-label, приоритетная
+                                        поддержка и кастомные домены.
+                                        <strong>Команда</strong> (2490 ₽/мес) —
+                                        всё из «Про» плюс совместная работа до
+                                        10 авторов, API-доступ, SSO-интеграция и
+                                        персональный менеджер.
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ==================== Футер ==================== -->
+        <footer class="relative border-t border-slate-200/60 bg-slate-50/50">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                    <!-- Brand -->
+                    <div class="col-span-2 md:col-span-1">
+                        <a href="#" class="flex items-center gap-2.5 mb-4">
+                            <img
+                                class="h-8 w-auto"
+                                src="public/images/basic-logo-notext.png"
+                                alt="логотип EssentialRoad"
+                            />
+                            <!--<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+            </div>-->
+                            <span
+                                class="text-base font-bold text-slate-900 tracking-tight"
+                                >Essential<span class="text-accent-600"
+                                    >Road</span
+                                ></span
+                            >
+                        </a>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Платформа для создания и изучения курсов в формате
+                            дорожных карт.
+                        </p>
+                    </div>
+                    <!-- Платформа -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Платформа
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Каталог курсов</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Создать курс</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Подписка Pro</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Для команд</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Ресурсы -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Ресурсы
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Центр помощи</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Блог</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Документация</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >API</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Компания -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Компания
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >О нас</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Карьера</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Правовая информация -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Правовая информация
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Условия использования</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Политика конфиденциальности</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Использование Cookie</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Bottom bar -->
+                <div
+                    class="mt-12 pt-8 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4"
+                >
+                    <p class="text-sm text-slate-400">
+                        © 2026 EssentialRoad. Все права защищены.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a
+                            href="#"
+                            class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-brand-100 flex items-center justify-center text-xs font-bold text-slate-500 hover:text-brand-600 transition-colors"
+                            >TG</a
+                        >
+                        <a
+                            href="#"
+                            class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-brand-100 flex items-center justify-center text-xs font-bold text-slate-500 hover:text-brand-600 transition-colors"
+                            >VK</a
+                        >
+                        <a
+                            href="#"
+                            class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-brand-100 flex items-center justify-center text-xs font-bold text-slate-500 hover:text-brand-600 transition-colors"
+                            >YT</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

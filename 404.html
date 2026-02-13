@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 — Страница не найдена | EssentialRoad</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/output.css" />
+    </head>
+    <body class="min-h-screen bg-white antialiased flex flex-col">
+        <header
+            class="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/40 bg-white/70 backdrop-blur-xl"
+        >
+            <div class="mx-auto max-w-7xl px-4 sm:px-6">
+                <div class="flex h-16 items-center justify-between">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center gap-2.5">
+                        <img
+                            class="h-10 w-auto"
+                            src="public/images/basic-logo-notext.png"
+                            alt="логотип EssentialRoad"
+                        />
+                        <!-- Старое лого --
+    <!--<div class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-accent-500 shadow-md shadow-brand-500/20">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+    </div>-->
+
+                        <span
+                            class="text-lg font-bold text-slate-900 tracking-tight"
+                            >Essential<span class="text-accent-600"
+                                >Road</span
+                            ></span
+                        >
+                    </a>
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex items-center gap-1">
+                        <a
+                            href="index.html"
+                            class="px-4 py-2 text-sm text-slate-600 hover:text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                            >Главная</a
+                        >
+                        <a
+                            href="about.html"
+                            class="px-4 py-2 text-sm hover:text-brand-600 bg-brand-100/50 text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                            >Контакты</a
+                        >
+                        <a
+                            href="FAQ.html"
+                            class="px-4 py-2 text-sm text-slate-600 hover:text-brand-600 transition-colors rounded-lg hover:bg-brand-50/50"
+                            >Вопросы</a
+                        >
+                    </nav>
+                    <!-- Desktop Buttons -->
+                    <div class="hidden md:flex items-center gap-3">
+                        <button
+                            class="text-sm px-4 py-2 text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-xl font-medium transition-all cursor-pointer"
+                        >
+                            Войти
+                        </button>
+                        <button
+                            class="text-sm px-6 py-3 bg-linear-to-r from-brand-600 to-brand-700 text-white rounded-xl font-medium shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"
+                        >
+                            Начать бесплатно
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button
+                        onclick="
+                            document
+                                .getElementById('mobile-menu')
+                                .classList.toggle('open');
+                            this.querySelector('.icon-menu').classList.toggle(
+                                'hidden',
+                            );
+                            this.querySelector('.icon-x').classList.toggle(
+                                'hidden',
+                            );
+                        "
+                        class="md:hidden p-2 text-slate-600 hover:text-slate-900 cursor-pointer"
+                    >
+                        <svg
+                            class="icon-menu h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="4" x2="20" y1="12" y2="12" />
+                            <line x1="4" x2="20" y1="6" y2="6" />
+                            <line x1="4" x2="20" y1="18" y2="18" />
+                        </svg>
+                        <svg
+                            class="icon-x h-5 w-5 hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="md:hidden border-t border-slate-200/40 bg-white/90 backdrop-blur-xl"
+            >
+                <div class="px-4 py-4 space-y-2">
+                    <a
+                        href="index.html"
+                        class="block px-4 py-2.5 text-sm text-slate-600 hover:text-brand-600 rounded-lg hover:bg-brand-50/50"
+                        >Главная</a
+                    >
+                    <a
+                        href="about.html"
+                        class="block px-4 py-2.5 text-sm text-slate-600 hover:text-brand-600 rounded-lg hover:bg-brand-50/50"
+                        >Контакты</a
+                    >
+                    <a
+                        href="FAQ.html"
+                        class="block px-4 py-2.5 text-sm text-slate-600 hover:text-brand-600 rounded-lg hover:bg-brand-50/50"
+                        >Вопросы</a
+                    >
+
+                    <div
+                        class="pt-3 border-t border-slate-100 flex flex-col gap-2"
+                    >
+                        <button
+                            class="w-full text-sm px-4 py-2.5 border-2 border-slate-200 bg-white/80 text-slate-700 rounded-xl font-medium hover:border-brand-300 hover:text-brand-700 transition-all cursor-pointer"
+                        >
+                            Войти
+                        </button>
+                        <button
+                            class="w-full text-sm px-4 py-2.5 bg-linear-to-r from-brand-600 to-brand-700 text-white rounded-xl font-medium shadow-lg shadow-brand-500/25 transition-all cursor-pointer"
+                        >
+                            Начать бесплатно
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==================== 404 HERO ==================== -->
+        <section
+            class="relative flex-1 flex items-center justify-center overflow-hidden pt-16"
+        >
+            <div
+                class="relative mx-auto max-w-5xl px-4 sm:px-6 py-20 text-center"
+            >
+                <div class="animate-fade-in-up-2">
+                    <span
+                        class="text-8xl sm:text-9xl font-extrabold bg-brand-600 bg-clip-text text-transparent tracking-tighter leading-none"
+                        >404</span
+                    >
+                </div>
+
+                <h1
+                    class="animate-fade-in-up-2 mt-4 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight"
+                >
+                    Вы сошли с дорожной карты
+                </h1>
+
+                <!-- Subtitle -->
+                <p
+                    class="animate-fade-in-up-3 mt-4 text-base sm:text-lg text-slate-500 max-w-lg mx-auto leading-relaxed"
+                >
+                    Эта страница не существует или была перемещена. Не
+                    волнуйтесь — мы поможем вам найти правильный маршрут!
+                </p>
+
+                <!-- CTA Buttons -->
+                <div
+                    class="animate-fade-in-up-4 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+                >
+                    <a
+                        href="index.html"
+                        class="w-full sm:w-auto text-base px-8 py-4 bg-gradient-to-r from-brand-600 to-brand-700 text-white rounded-xl font-medium shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer inline-flex items-center justify-center gap-2 no-underline"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                            />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        На главную
+                    </a>
+                    <a
+                        href="#"
+                        onclick="
+                            history.back();
+                            return false;
+                        "
+                        class="w-full sm:w-auto text-base px-8 py-4 border-2 border-slate-200 bg-white/80 backdrop-blur-sm text-slate-700 rounded-xl font-medium hover:border-brand-300 hover:text-brand-700 hover:bg-brand-50/50 transition-all cursor-pointer inline-flex items-center justify-center gap-2 no-underline"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="m12 19-7-7 7-7" />
+                            <path d="M19 12H5" />
+                        </svg>
+                        Назад
+                    </a>
+                </div>
+
+                <!-- Helpful Links -->
+                <div class="animate-fade-in-up-4 mt-14">
+                    <p class="text-sm text-slate-400 mb-5 font-medium">
+                        Или перейдите к полезным разделам:
+                    </p>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto"
+                    >
+                        <a
+                            href="index.html"
+                            class="group rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-sm p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-200/60 hover:-translate-y-1 no-underline"
+                        >
+                            <div
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-600 shadow-md shadow-brand-500/20 mb-3 transition-transform duration-300 group-hover:scale-110"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-white"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="m21 21-4.3-4.3" />
+                                </svg>
+                            </div>
+                            <h3
+                                class="text-sm font-semibold text-slate-900 mb-1"
+                            >
+                                Каталог курсов
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Найдите идеальный курс среди тысяч дорожных карт
+                            </p>
+                        </a>
+                        <a
+                            href="FAQ.html"
+                            class="group rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-sm p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-200/60 hover:-translate-y-1 no-underline"
+                        >
+                            <div
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-accent-500 to-accent-600 shadow-md shadow-accent-500/20 mb-3 transition-transform duration-300 group-hover:scale-110"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-white"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path
+                                        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                                    />
+                                    <path d="M12 17h.01" />
+                                </svg>
+                            </div>
+                            <h3
+                                class="text-sm font-semibold text-slate-900 mb-1"
+                            >
+                                Частые вопросы
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Ответы на популярные вопросы о платформе
+                            </p>
+                        </a>
+                        <a
+                            href="about.html"
+                            class="group rounded-xl border border-slate-200/60 bg-white/70 backdrop-blur-sm p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-brand-200/60 hover:-translate-y-1 no-underline"
+                        >
+                            <div
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 shadow-md shadow-brand-500/20 mb-3 transition-transform duration-300 group-hover:scale-110"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-white"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"
+                                    />
+                                    <path
+                                        d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"
+                                    />
+                                </svg>
+                            </div>
+                            <h3
+                                class="text-sm font-semibold text-slate-900 mb-1"
+                            >
+                                Связаться с нами
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Напишите нам, и мы поможем найти нужное
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <!-- ==================== Футер ==================== -->
+        <footer class="relative border-t border-slate-200/60 bg-slate-50/50">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                    <!-- Brand -->
+                    <div class="col-span-2 md:col-span-1">
+                        <a href="#" class="flex items-center gap-2.5 mb-4">
+                            <img
+                                class="h-8 w-auto"
+                                src="public/images/basic-logo-notext.png"
+                                alt="логотип EssentialRoad"
+                            />
+                            <!--<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+        </div>-->
+                            <span
+                                class="text-base font-bold text-slate-900 tracking-tight"
+                                >Essential<span class="text-accent-600"
+                                    >Road</span
+                                ></span
+                            >
+                        </a>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Платформа для создания и изучения курсов в формате
+                            дорожных карт.
+                        </p>
+                    </div>
+                    <!-- Платформа -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Платформа
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Каталог курсов</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Создать курс</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Подписка Pro</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Для команд</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Ресурсы -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Ресурсы
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Центр помощи</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Блог</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Документация</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >API</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Компания -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Компания
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >О нас</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Карьера</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Правовая информация -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-900 mb-3">
+                            Правовая информация
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Условия использования</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Политика конфиденциальности</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-sm text-slate-500 hover:text-brand-600 transition-colors"
+                                    >Использование Cookie</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Bottom bar -->
+                <div
+                    class="mt-12 pt-8 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4"
+                >
+                    <p class="text-sm text-slate-400">
+                        © 2026 EssentialRoad. Все права защищены.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a
+                            href="#"
+                            class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-brand-100 flex items-center justify-center text-xs font-bold text-slate-500 hover:text-brand-600 transition-colors"
+                            >TG</a
+                        >
+                        <a
+                            href="#"
+                            class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-brand-100 flex items-center justify-center text-xs font-bold text-slate-500 hover:text-brand-600 transition-colors"
+                            >VK</a
+                        >
+                        <a
+                            href="#"
+                            class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-brand-100 flex items-center justify-center text-xs font-bold text-slate-500 hover:text-brand-600 transition-colors"
+                            >YT</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
